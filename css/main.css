@@ -1,0 +1,1816 @@
+/* main */
+.sc_mainvis_reservation{
+  position: relative;
+}
+
+.main_vis{
+  position: relative;
+}
+.main_vis .text_box{
+  position: absolute;
+  top: 39vh;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  transition: all 0.4s ease 0s;
+  z-index: 2;
+}
+.main_vis .text_box .main_title{
+  font-weight: 200;
+  font-size: 60px;
+  text-transform: capitalize;
+  position: relative;
+}
+.main_vis .text_box .main_title::before{
+  content: "";
+  width: 57px;
+  height: 37px;
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_text.svg) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 450px;
+  top: 10px;
+}
+.main_vis .text_box > p{
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: -0.02rem;
+}
+
+.main_vis .main_img_wrap{
+  width: 100%;
+  height: 969px;
+  background: #444;
+}
+.main_vis .main_bg_wrap{
+  width: 100%;
+  height: 100%;
+}
+
+.main_vis .main_img_wrap .main_bg{
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+.main_vis .main_img_wrap .swiper-slide-active .main_bg{
+  animation: visualAni 1.2s ease 0s forwards;
+}
+@keyframes visualAni{
+	0%{transform:skewX(6deg); opacity: 0;}
+	100%{transform:skewX(0deg);opacity: 1;}
+}
+.main_vis .main_bg::before{
+  content: "";
+  position: absolute;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+.main_vis .bg01{
+  background: url(http://interburgo.koweb.co.kr/images/main/img_visual01.jpg) no-repeat;
+  background-size: cover;
+}
+.main_vis .bg02{
+  background: url(http://interburgo.koweb.co.kr/images/main/img_visual02.jpg) no-repeat;
+  background-size: cover;
+}
+.main_vis .bg03{
+  background: url(http://interburgo.koweb.co.kr/images/main/img_visual03.jpg) no-repeat;
+  background-size: cover;
+}
+.main_vis .bg04{
+  background: url(http://interburgo.koweb.co.kr/images/main/img_visual04.jpg) no-repeat;
+  background-size: cover;
+}
+.main_vis .bg05{
+  background: url(http://interburgo.koweb.co.kr/images/main/img_visual05.jpg) no-repeat;
+  background-size: cover;
+}
+.main_vis .bg06{
+  background: url(http://interburgo.koweb.co.kr/images/main/img_visual06.jpg) no-repeat;
+  background-size: cover;
+}
+
+.main_vis .swiper-pagination{
+  top: 63vh;
+}
+.main_vis .swiper-pagination-bullet{
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  transition: all 0.4s ease 0s;
+  opacity: 1;
+}
+.main_vis .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .main_vis .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 30px 0 0;
+}
+.main_vis .swiper-pagination-bullet-active{
+  position: relative;
+}
+.main_vis .swiper-pagination-bullet-active::after{
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 23px;
+  height: 23px;
+  margin: -12px -12px;
+  border: 1px solid #fff;
+  transition: all 0.4s ease 0s;
+  border-radius: 30px;
+}
+
+
+.reservation_calendar{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7vh;
+  z-index: 1;
+  width: 1200px;
+}
+.reservation_calendar .cal_list{
+  margin: 0 auto;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  /* width: 1200px; */
+}
+.reservation_calendar .cal_item{}
+.reservation_calendar .ci_date{
+  width: 30.5%;
+  display: flex;
+}
+.reservation_calendar .rooms{
+  width: 14.2%;
+}
+.reservation_calendar .adults{
+  width: 14.2%;
+}
+.reservation_calendar .child{
+  width: 14.2%;
+}
+.reservation_calendar .company{
+  width: 13%;
+}
+.reservation_calendar .company > input{
+  width: 100%;
+  border: none;
+  border-right: 1px solid #ddd;
+  line-height: 65px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  height: 65px;
+  outline: none;
+}
+.reservation_calendar .company > input::placeholder{
+  color: #666;
+}
+.reservation_calendar .search{
+  width: 13.9%;
+}
+.reservation_calendar .search > a{
+  display: block;
+  background: #c6a582;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  line-height: 65px;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 1px;
+}
+.reservation_calendar .cal_item select{
+  border: none;
+  border-right: 1px solid #ddd;
+  width: 100%;
+  line-height: 65px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  height: 65px;
+  padding: 0 15px 0 19px;
+  outline: none;
+  font-family: 'Noto Sans KR', serif;
+  appearance: none;
+}
+/* //sc_mainvis_reservation */
+
+
+
+/* 예약달력커스텀css */
+.date_box{
+  width: 50%;
+  border: none;
+  line-height: 65px;
+  color: #333;
+  font-size: 13px;
+  font-weight: 700;
+  height: 65px;
+  padding: 0 15px 0 19px;
+  outline: none;
+  font-family: 'Lora', 'Noto Sans KR', serif;
+}
+.from{
+  border-right: 1px solid #ddd;
+}
+.to{
+  border-right: 1px solid #ddd;
+}
+
+/* 달력커스텀 */
+.ui-widget.ui-widget-content{
+  border: 1px solid #ddd;
+  padding: 0;
+}
+
+/* 월,년 헤더 */
+.ui-widget-header{
+  border: none;
+  background: #fff;
+  color: #010101;
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 15px;
+  font-family: 'Lora', 'Noto Sans KR', serif;
+}
+.ui-datepicker .ui-datepicker-title select{
+  font-size: 15px;
+}
+.ui-datepicker-title select{
+  position: relative;
+  height: 40px;
+  line-height: 28px;
+  font-family: 'Lora', 'Noto Sans KR', serif;
+  color: #010101;
+  font-weight: 600;
+  border: none;
+  padding: 8px 24px 8px 8px;
+  background: #fff;
+  appearance: none;
+  -moz-appearance: none; /* Firefox */ 
+  -webkit-appearance: none; /* Safari and Chrome */
+  background: url(../img/date_arrow.jpg)no-repeat;
+}
+.ui-datepicker-title .ui-datepicker-month{
+  background-position: 55px 14px;
+}
+.ui-datepicker-title .ui-datepicker-year{
+  background-position: 67px 14px;
+}
+
+.ui-datepicker-title > span{
+  display: inline-block;
+  padding: 8px 24px 7px 8px;
+  font-family: 'Lora', 'Noto Sans KR', serif;
+  color: #010101;
+  font-weight: 600;
+  background: #fff;
+}
+
+/* 화살표 ㄴㄴ */
+.ui-datepicker-prev{
+  display: none;
+}
+.ui-datepicker-next{
+  display: none;
+}
+
+/* 요일 커스텀 */
+.ui-datepicker-group{
+  position: relative;
+}
+.ui-datepicker-group::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 54px;
+  background-color: #F4F4F4;
+  height: 30px;
+  z-index: -1;
+}
+.ui-datepicker-multi .ui-datepicker-group table{
+  width: 93%;
+  margin: 0 auto 0.4em;
+}
+.ui-datepicker-calendar thead th span{
+  font-family: 'Lora', 'Noto Sans KR', serif;
+  color: #999;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ui-datepicker-calendar thead .ui-datepicker-week-end span{
+  color: #C64A4A;
+}
+.ui-datepicker-calendar thead .ui-datepicker-week-end:last-child span{
+  color: #004aa6;
+}
+
+/* 날짜 커스텀 */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active{
+  font-family: 'Lora', 'Noto Sans KR', serif;
+  border: none;
+  background: #fff;
+  font-weight: 400;
+  color: #040404;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1;
+  padding: 8px 0;
+}
+
+
+.sc_event_package{
+  margin: 120px 0;
+}
+.sc_event_package .cont_head{
+  margin-bottom: 70px;
+}
+.sc_event_package .event_box{
+  margin-left: 15%;
+  position: relative;
+  height: 508px;
+}
+.sc_event_package .event_box .event_slide{
+  width: 414px;
+}
+.sc_event_package .event_box .swiper-button-disabled{
+  opacity: 0.3;
+}
+.sc_event_package .event_box .event_slide .img_wrap{
+  position: relative;
+}
+.sc_event_package .event_box .event_slide .img_wrap .tag{
+  display: inline-block;
+  position: absolute;
+  top: 228px;
+  left: 0;
+  padding: 6px 18px;
+  background: #c6a582;
+  font-size: 15px;
+  color: #fff;
+}
+
+.sc_event_package .event_box .event_slide .text_wrap{
+  margin-top: 63px;
+}
+.sc_event_package .event_box .event_slide .text_wrap .title{
+  display: block;
+  font-weight: 500;
+    font-size: 18px;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Noto Sans KR' , Sans-serif;
+}
+.sc_event_package .event_box .event_slide .text_wrap .txt{
+  overflow: hidden;
+    margin-top: 9px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #555;
+    letter-spacing: -0.01rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sc_event_package .event_box .event_slide .text_wrap .date{
+  display: block;
+  margin-top: 35px;
+  font-size: 14px;
+  color: #999;
+  letter-spacing: 2px;
+  font-family: 'Lora', serif;
+}
+
+.sc_event_package .control_box{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 20px;
+  z-index: 10;
+}
+.sc_event_package .event_box .slide_btn{
+  right: 15%;
+}
+.sc_event_package .swiper .swiper-pagination-progressbar{
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  top: auto;
+  width: 1140px;
+  height: 4px;
+  background: #efefef;
+}
+.sc_event_package .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background: #5d5d5d;
+}
+/* //sc_event_package */
+
+/* sc_dining + sc_special */
+.sc_dining{
+  margin: 150px 0 150px;
+}
+.sc_dining .cont_head{
+  margin-bottom: 87px;
+}
+
+.tab_slide_box{
+  width: 100%;
+  max-width: 1400px;
+  height: 658px;
+  margin: 0 auto;
+  position: relative;
+}
+/* 공용 탭타이틀 */
+.tab_title{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.tab_title .t_t_list{
+  display: flex;
+  width: 834px;
+  justify-content: space-between;
+}
+.tab_title .t_t_item{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Noto Sans KR';
+  font-weight: 400;
+  color: #a9a9a9;
+  transition: color 0.4s ease 0s;
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+.tab_title .t_t_item.on{
+  font-weight: 500;
+  color: #222;
+}
+.tab_title .t_t_item > a{
+  display: block;
+  height: 100%;
+}
+
+.tab_title .t_t_item::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #222;
+  transition: all 0.4s ease 0s;
+}
+.tab_title .t_t_item.on::after{
+  width: 100%;
+}
+
+/* 탭내용물 */
+.cate_box{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 1s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+.cate_box.on{
+  opacity: 1;
+  visibility: visible;
+}
+.cate_box2{
+  flex-direction: row-reverse;
+}
+
+.sc_dining .tab_cate_all{
+  position: relative;
+}
+.sc_dining .tab_cate_all .cate_box{
+  position: absolute;
+}
+.sc_special .tab_cate_all{
+  position: relative;
+}
+.sc_special .tab_cate_all .cate_box{
+  position: absolute;
+}
+
+.cate_box .left_wrap{
+  width: 499px;
+}
+.cate_box .left_wrap .view_btn{
+  float: right;
+  margin-right: 1px;
+}
+.cate_box .left_wrap .info_txt{
+  margin-top: 100px;
+  width: 320px;
+}
+.cate_box .left_wrap .info_txt .title{
+  font-weight: 400;
+  font-size: 29px;
+  color: #222;
+  letter-spacing: -0.05rem;
+}
+.cate_box .left_wrap .info_txt .txt{
+  line-height: 1.8;
+  margin-top: 26px;
+  font-weight: 300;
+  color: #666;
+  letter-spacing: -0.03rem;
+}
+
+.cate_box .right_wrap{
+  width: 834px;
+  margin: 88px 0 0 70px;
+}
+.cate_box .right_wrap .img_slide_box{
+  overflow: visible;
+  position: relative;
+  height: 570px;
+}
+.cate_box .right_wrap .img_slide_box .img_slide{
+  height: 504px;
+}
+.cate_box .right_wrap .img_slide_box .slide_btn{
+  left: 0;
+  bottom: 0;
+}
+.cate_box .right_wrap .swiper-pagination{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  width: auto;
+}
+.cate_box .swiper-pagination-bullet{
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #e2e2e2;
+  transition: all 0.3s ease 0s;
+  border-radius: 30px;
+  opacity: 1;
+}
+.cate_box .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .cate_box .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 0 0 33px;
+}
+.cate_box .swiper-pagination-bullet-active{
+  background: #c6a582;
+}
+
+/* //sc_dining */
+
+.sc_special{
+  padding: 130px 0 140px;
+  background: #fafafa;
+}
+.sc_special .cont_head{
+  margin-bottom: 87px;
+}
+.sc_special .tab_title{
+  position: absolute;
+  left: 0;
+}
+.sc_special .right_wrap{
+  margin: 88px 70px 0 0;
+}
+/* //sc_special */
+
+.sc_room{
+  background-image: url(http://interburgo.koweb.co.kr/images/main/bg_room.jpg);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  flex-direction: row-reverse;
+  background-size: cover;
+}
+.sc_room .cont_head{
+  text-align: left;
+  position: absolute;
+  left: calc(50% - 700px);
+  top: 22vh;
+}
+.sc_room .cont_head .main_title{
+  color: #fff;
+}
+.sc_room .cont_head .txt{
+  color: #fff;
+  font-weight: 300;
+}
+
+.room_tab_title{
+  position: relative;
+  max-width: 567px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.room_tab_title::before{
+  content: "";
+    position: absolute;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+    /* transition: all 2.3s cubic-bezier(0.29, 0.85, 0.61, 1.01) 0.2s; */
+}
+.room_tab_title .r_t_list{
+  display: flex;
+  align-items: flex-start;
+  padding: 18vh 0 0 6vw;
+  /* transition: all 1s ease 0.6s; */
+  flex-direction: column;
+}
+.room_tab_title .r_t_item{
+  opacity: 0.3;
+  margin-bottom: 33px;
+  font-size: 41px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+.room_tab_title .r_t_item::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #fff;
+  transition: all 0.4s ease 0s;
+}
+.room_tab_title .r_t_item.on{
+  opacity: 1;
+  transition-delay: 0s;
+}
+.room_tab_title .r_t_item.on::after{
+  width: 100%;
+}
+
+.room_tab_slide_box{
+  width: 100%;
+  display: flex;
+  flex: 2;
+  align-items: flex-end;
+  position: relative;
+}
+.room_cate_box{
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: opacity 1s ease 0s, visibility 1s ease 0s;
+  width: 100%;
+}
+.room_cate_box.on{
+  opacity: 1;
+  visibility: visible;
+}
+
+.room_wrap{
+  float: left;
+  position: relative;
+  width: 834px;
+  overflow: visible;
+}
+.room_wrap .room_img{
+  width: 834px;
+}
+
+.room_wrap .slide_btn{
+  position: absolute;
+  bottom: 160px;
+  right: -238px;
+}
+.room_wrap .slide_btn .s_btn{
+  background: url(http://interburgo.koweb.co.kr/images/main/arr_basic_white.svg
+  ) no-repeat 50% 50%;
+}
+
+.room_cate_box .text_wrap{
+  float: right;
+  color: #fff;
+  margin-top: 115px;
+  padding-right: 105px;
+}
+.room_cate_box .text_wrap .title{
+  font-weight: 400;
+  font-size: 29px;
+  color: #c6a582;
+  letter-spacing: -0.05rem;
+}
+.room_cate_box .text_wrap .txt{
+  line-height: 1.8;
+    margin-top: 26px;
+    font-weight: 300;
+    letter-spacing: -0.03rem;
+}
+/* //sc_room */
+
+.sc_contact_us{
+  overflow: hidden;
+}
+.cont_box{
+  float: left;
+  width: 834px;
+  height: 839px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.cont_box .cont_head{
+  text-align-last: left;
+}
+.cont_box .cont_head .hotel_address{
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  width: 256px;
+}
+.cont_box .cont_head .hotel_address::after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: 260px;
+  width: 18px;
+  height: 21px;
+  margin-left: 8px;
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_contact.svg) no-repeat 50% 50%;
+}
+.cont_box .cont_head .hotel_address .hotel_address_hidden{
+  border: none;
+  outline: none;
+  width: 100%;
+  display: block;
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  color: #222;
+  font-weight: 300;
+  cursor: pointer;
+}
+.cont_box .cont_head .hotel_address .hotel_address_hidden::selection{
+  background: #fff;
+  color: #222;
+}
+
+.cont_box .cont_head .hotel_address .hotel_address_hidden{
+  border: none;
+  outline: none;
+  width: 100%;
+  display: block;
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  color: #222;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.cont_box .cont_head .call{
+  margin-top: 3px;
+  font-size: 30px;
+  color: #222;
+}
+.css_box{
+  margin: 75px 74px 0 0;
+  border-bottom: 2px solid #ddd;
+  width: 500px;
+}
+.css_box .css_list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.css_box .css_item{
+  padding: 23px 0;
+  width: 50%;
+}
+.css_box .css_item:nth-child(odd){
+  width: 47%;
+}
+.css_box .css_item a{
+  display: block;
+  overflow: hidden;
+}
+.css_box .css_item:nth-child(odd) a{
+  border-right: 1px solid #ddd;
+}
+.css_box .css_item:nth-child(even){
+  padding-left: 30px;
+}
+
+.css_box .css_item .ico{
+  display: block;
+  width: 45px;
+  height: 40px;
+  float: left;
+  margin-top: 5px;
+}
+.css_box .css_item .i1{
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_location01.svg) no-repeat;
+  background-size: 100%;
+}
+.css_box .css_item .i2{
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_location02.svg) no-repeat;
+  background-size: 100%;
+}
+.css_box .css_item .i3{
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_location03.svg) no-repeat;
+  background-size: 100%;
+}
+.css_box .css_item .i4{
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_location04.svg) no-repeat;
+  background-size: 100%;
+}
+.css_box .css_item .i5{
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_location06.svg) no-repeat;
+  background-size: 100%;
+}
+.css_box .css_item .i6{
+  background: url(http://interburgo.koweb.co.kr/images/main/icon_location05.svg) no-repeat;
+  background-size: 100%;
+}
+
+.css_box .css_item .txt_wrap{
+  float: left;
+  margin-left: 30px;
+}
+.css_box .css_item .txt{
+  font-weight: 400;
+  font-size: 13px;
+  color: #555;
+}
+.sc_contact_us .css_item .txt2{
+  display: none;
+}
+.css_box .css_item .title{
+  font-weight: 500;
+  font-size: 15px;
+  color: #222;
+}
+
+.map_box{
+  float: right;
+  background: #eee;
+  width: calc(100% - 834px);
+  height: 839px;
+}
+.map_box .info_wrap{
+  background: url(http://interburgo.koweb.co.kr/images/main/img_map.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.map_box .info_wrap .pointer{
+  position: absolute;
+  top: 57%;
+  right: 55%;
+  width: 17px;
+  height: 17px;
+  background: #474440;
+  border-radius: 100px;
+}
+.map_box .info_wrap .pointer::before{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #c6a582;
+  border-radius: 100px;
+  animation: pulsate2 1.2s ease 0s infinite;
+  animation-delay: 0.1s;
+}
+@keyframes pulsate2 {
+  0%{opacity:0; transform: scale(1,1);}
+  40%{opacity:0.1; }
+  100%{opacity:0; transform: scale(8,8);}
+}
+.map_box .info_wrap .pointer::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #c6a582;
+  animation: pulsate 1.2s ease 0s infinite;
+  border-radius: 100px;
+}
+@keyframes pulsate {
+  0%{opacity:0.1; transform: scale(1,1);}
+  40%{opacity:0.3; }
+  100%{opacity:0; transform: scale(4,4);}
+}
+.map_box .info_list{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.map_box .info_list .info_item > a{
+  display: block;
+  width: 102px;
+  line-height: 1.2;
+  padding: 33px 0;
+  background: #474440;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+.map_box .info_list .info_item:last-child > a{
+  background: #c6a582;
+}
+/* //sc_contact_us */
+
+
+
+
+
+/*
+가장중요한 조건
+가로스롤은 절대 생기면 안된다.
+가로스크롤이 생기는이유는
+- 위드가 살이있는영역 ex)1200 1000px
+- absolute ->부모한테 무조건 overflow hidden을 줘야됨
+모바일 확인은 최고 작은 사이즈인 320 (크롬모바일 아이폰se) 확인시 잘나오묜 끝.
+*/
+
+
+@media screen and (max-width: 1820px) {
+  /* sc_event_package */
+  .sc_event_package .swiper .swiper-pagination-progressbar{
+    width: 980px;
+  }
+
+  /* sc_room */
+  .room_tab_title{
+    max-width: 345px;
+  }
+  .room_tab_title .r_t_list{
+    padding: 18vh 0 0 4vw;
+  }
+  .room_tab_title .r_t_item{
+    font-size: 39px;
+    margin-bottom: 19px;
+  }
+  .room_wrap{
+    width: 780px;
+  }
+  .room_cate_box .text_wrap{
+    padding-right: 62px;
+  }
+  .room_cate_box .text_wrap .txt{
+    margin-top: 21px;
+    font-size: 15px;
+  }
+  .room_wrap .slide_btn{
+    right: -277px;
+  }
+
+  /* .sc_contact_us */
+  .sc_contact_us .cont_box{
+    width: 50%;
+  }
+  .sc_contact_us .map_box{
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 1520px) {
+  /* sc_mainvis_reservation */
+  .main_vis .main_img_wrap{
+    height: 100vh;
+  }
+  .main_vis .text_box .main_title::before{
+    left: 247px;
+  }
+  .room_wrap .slide_btn {
+    right: -215px;
+  }
+
+  /* sc_event_package */
+  .sc_event_package .swiper .swiper-pagination-progressbar{
+    width: 900px;
+  }
+  .sc_event_package .event_box{
+    margin-left: 10%;
+  }
+
+  /* sc_dining */
+  .tab_slide_box{
+    max-width: 1200px;
+  }
+  .cate_box .left_wrap {
+    width: 379px;
+  }
+  .cate_box .right_wrap {
+    width: 760px;
+    margin: 88px 0 0 61px;
+  }
+  .tab_title .t_t_list {
+    width: 760px;
+  }
+  /* sc_special */
+  .sc_special .right_wrap {
+    margin: 88px 61px 0 0;
+  }
+
+  /* sc_room */
+  .room_wrap {
+    width: 740px;
+  }
+}
+
+
+@media screen and (max-width: 1280px){
+  /* sc_event_package */
+  .sc_event_package .event_box{
+    margin-left: 4%;
+  }
+  .sc_event_package .swiper .swiper-pagination-progressbar{
+    width: 950px;
+  }
+  .sc_event_package .event_box .slide_btn {
+    right: 4%;
+  }
+
+  /* sc_dining */
+  .tab_slide_box{
+    max-width: 1163px;
+  }
+  .cate_box .left_wrap {
+    width: 472px;
+  }
+  .cate_box .right_wrap {
+    width: 640px;
+    margin: 88px 0 0 61px;
+  }
+  .tab_title .t_t_list {
+    width: 640px;
+  }
+  /* sc_special */
+  .sc_special .right_wrap {
+    margin: 88px 61px 0 0;
+  }
+
+  /* sc_room */
+  .sc_room .cont_head{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .room_wrap{
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    width: 919px;
+  }
+  .room_cate_box .text_wrap{
+    float: none;
+    margin-top: 40px;
+    padding: 0 0 40px 50px;
+  }
+  .room_wrap .slide_btn{
+    right: 50px;
+    bottom: -67px;
+  }
+
+  /* sc_contact_us */
+  .sc_contact_us .cont_box {
+    width: 508px;
+  }
+  .sc_contact_us .cont_box .wrap{
+    margin-left: 50px;
+  }
+  .cont_head .main_title{
+    font-size: 48px;
+  }
+  .css_box{
+    margin: 96px 4vw 0 0;
+    width: 407px;
+  }
+  .css_box .css_item:nth-child(odd) {
+    width: 45%;
+  }
+  .css_box .css_item:nth-child(even) {
+    padding-left: 3%;
+  }
+  .css_box .css_item .ico{
+    width: 36px;
+    height: 31px;
+  }
+  .css_box .css_item .txt_wrap{
+    margin-left: 8px;
+  }
+  .css_box .css_item:nth-child(5) .txt_wrap{
+    margin-top: -5px;
+  }
+  .css_box .css_item:nth-child(5) .txt{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  .css_box .css_item .txt2{
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    color: #555;
+  }
+  .sc_contact_us .map_box {
+    width: calc(100% - 508px);
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  /* sc_mainvis_reservation */
+  .main_vis .text_box .main_title{
+    font-size: 42px;
+  }
+  .main_vis .text_box .main_title::before {
+    left: 112px;
+    width: 48px;
+    height: 27px;
+  }
+  .main_vis .swiper-pagination {
+    top: 58vh;
+  }
+  .reservation_calendar{
+    bottom: 5vh;
+    width: 100%;
+  }
+  .reservation_calendar .cal_list{
+    flex-wrap: wrap;
+    background: none;
+    margin: 0 10px;
+  }
+  .reservation_calendar .cal_list .cal_item{
+    margin-bottom: 8px;
+  }
+  .reservation_calendar .ci_date{
+    width: 100%;
+    display: flex;
+  }
+  .reservation_calendar .rooms{
+    width: 33.33%;
+  }
+  .reservation_calendar .adults{
+    width: 33.33%;
+  }
+  .reservation_calendar .child{
+    width: 33.33%;
+  }
+  .reservation_calendar .company{
+    width: 50%;
+  }
+  .reservation_calendar .company > input{
+    width: 100%;
+    border: none;
+    border-right: 1px solid #ddd;
+    line-height: 65px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    height: 65px;
+    outline: none;
+  }
+  .reservation_calendar .company > input::placeholder{
+    color: #666;
+  }
+  .reservation_calendar .search{
+    width: 50%;
+  }
+
+  /* sc_Event & Package */
+  .cont_head .main_title {
+    font-size: 40px;
+  }
+  .cont_head .txt{
+    font-size: 15px;
+    margin-top: 18px;
+  }
+  .sc_event_package .event_box{
+    height: 400px;
+  }
+  .sc_event_package .event_box .event_slide{
+    width: 320px;
+  }
+  .sc_event_package .event_box .event_slide .img_wrap .tag{
+    top: 170px;
+  }
+  .sc_event_package .event_box .event_slide .text_wrap {
+    margin-top: 50px;
+  }
+  .sc_event_package .swiper .swiper-pagination-progressbar {
+    width: 675px;
+  }
+
+  /* sc_Dining */
+  .sc_dining {
+    margin: 110px 0 110px;
+  }
+  .sc_dining .cont_head {
+    margin-bottom: 50px;
+  }
+  .tab_slide_box{
+    max-width: none;
+    width: 100%;
+    padding: 0 30px;
+    height: 471px;
+  }
+  .tab_title .t_t_list {
+    width: 60vw;
+  }
+  .tab_title {
+    position: absolute;
+    top: 0;
+    right: 30px;
+  }
+  .tab_title .t_t_item.on {
+    font-size: 15px;
+  }
+  .tab_title .t_t_item{
+    font-size: 15px;
+  }
+  .cate_box .left_wrap{
+    width: 269px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .cate_box .left_wrap .img_wrap img{
+    display: none;
+  }
+  .cate_box .left_wrap .info_txt{
+    margin-top: 0;
+    width: 100%;
+  }
+  .cate_box .left_wrap .info_txt .title{
+    font-size: 26px;
+  }
+  .cate_box .left_wrap .info_txt .txt{
+    display: none;
+  }
+  .cate_box .left_wrap .view_btn{
+    float: none;
+    margin-right: 0px;
+    padding: 16px 34px;
+  }
+  .tab_cate_all .cate_box {
+    width: 100%;
+  }
+  .cate_box .right_wrap {
+    width: 60vh;
+    margin: 70px 0 0 0;
+  }
+  .cate_box .right_wrap .img_slide_box {
+    height: 400px;
+  }
+  .cate_box .right_wrap .img_slide_box .img_slide {
+    height: 348px;
+  }
+
+  /* sc_special */
+  .sc_special {
+    padding: 80px 0 80px;
+    background: #fafafa;
+  }
+  .sc_special .tab_title {
+    position: absolute;
+    left: 30px;
+  }
+  
+  /* sc_room */
+  .sc_room{
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .room_tab_title::before {
+    opacity: 0;
+  }
+  .sc_room .cont_head {
+    opacity: 1;
+    visibility: visible;
+    position: initial;
+    left: 2%;
+    top: 60px;
+    padding-left: 3%;
+  }
+  .room_tab_title {
+    max-width: initial;
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+  }
+  .room_tab_title .r_t_list {
+    display: flex;
+    padding: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .room_tab_title .r_t_item {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+  .room_wrap {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    height: 525px;
+  }
+  .room_cate_box .text_wrap {
+    float: none;
+    margin-top: 40px;
+    padding: 0 0 80px 2%;
+  }
+  .room_cate_box .text_wrap .title{
+    font-size: 26px;
+  }
+  .room_wrap .slide_btn {
+    right: 0px;
+    bottom: -65px;
+  }
+
+  /* sc_contact_us */
+  .sc_contact_us .cont_box {
+    float: none;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .sc_contact_us .map_box {
+    float: none;
+    width: 100%;
+    height: 400px;
+  }
+  .sc_contact_us .cont_box .wrap {
+    margin-left: 30px;
+    padding-top: 70px;
+  }
+  .cont_box .cont_head .call {
+    font-size: 26px;
+  }
+  .css_box {
+    margin: 26px 0 30px 0;
+    width: auto;
+    border-bottom: none;
+  }
+
+  .css_box .css_item {
+    padding: 17px 0;
+    width: 50%;
+  }
+  .css_box .css_item .title {
+    font-weight: 400;
+  }
+  .css_box .css_item:nth-child(odd) {
+    width: 29%;
+  }
+  .css_box .css_item:nth-child(5) .txt {
+    opacity: 1;
+    visibility: visible;
+    position: initial;
+  }
+  .css_box .css_item .txt2 {
+    display: none;
+  }
+  .css_box .css_item .txt_wrap {
+    margin-left: 20px;
+  }
+  .map_box .info_list {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: auto;
+  }
+  .map_box .info_list .info_item > a{
+    width: 82px;
+    padding: 23px 0;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .top_btn{
+    display: none;
+  }
+
+  /* sc_mainvis_reservation */
+  .main_vis .text_box{
+    top: 37vh;
+  }
+  .main_vis .text_box .main_title {
+    font-size: 31px;
+    width: 290px;
+    line-height: 1.2;
+    margin: 0 auto;
+  }
+  .main_vis .text_box .main_title::before {
+    left: 23px;
+    top: 3px;
+    width: 26px;
+    height: 17px;
+  }
+  .main_vis .text_box > p{
+    margin-top: 13px;
+    font-size: 14px;
+  }
+  .main_vis .swiper-pagination .swiper-pagination-bullet:last-child{
+    margin-right: 0;
+  }
+  .main_vis .swiper-pagination-bullet{
+    width: 6px;
+    height: 6px;
+  }
+  .main_vis .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .main_vis .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 20px 0 0;
+  }
+  .reservation_calendar .cal_item select{
+    line-height: 40px;
+    height: 40px;
+    border-right: none;
+  }
+  .reservation_calendar .cal_list .cal_item {
+    margin-bottom: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .date_box{
+    line-height: 40px;
+    height: 40px;
+    border: none;
+  }
+  .reservation_calendar .company > input{
+    height: 40px;
+  }
+  .reservation_calendar .search > a{
+    line-height: 40px;
+  }
+  .reservation_calendar .company {
+    width: 100%;
+  }
+  .reservation_calendar .search {
+    width: 100%;
+  }
+
+  /* sc_event_package */
+  .sc_event_package {
+    margin: 60px 0;
+  }
+  .cont_head .main_title {
+    font-size: 30px;
+  }
+  .cont_head .txt {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  .sc_event_package .cont_head {
+    margin-bottom: 30px;
+  }
+  .sc_event_package .event_box .event_slide {
+    width: 270px;
+    margin-right: 20px !important;
+  }
+  .sc_event_package .event_box .event_slide .img_wrap .tag {
+    top: 143px;
+    padding: 3px 12px;
+  }
+  .sc_event_package .event_box .event_slide .text_wrap {
+    margin-top: 32px;
+  }
+  .sc_event_package .event_box .event_slide .text_wrap .title{
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .sc_event_package .event_box .event_slide .text_wrap .txt{
+    margin-top: 2px;
+    font-size: 14px;
+  }
+  .sc_event_package .event_box .event_slide .text_wrap .date{
+    margin-top: 13px;
+    font-size: 12px;
+  }
+  .sc_event_package .event_box {
+    height: 330px;
+  }
+  .slide_btn .s_btn{
+    width: 45px;
+  }
+  .slide_btn .s_btn.prev{
+    margin-right: 13px;
+  }
+  .sc_event_package .swiper .swiper-pagination-progressbar {
+    width: 325px;
+    bottom: 2px;
+  }
+
+  /* sc_dining */
+  .sc_dining {
+    margin: 65px 0 0 0;
+    padding: 55px 0 65px;
+    background: #f7f7f7;
+  }
+  .sc_dining .cont_head {
+    margin-bottom: 29px;
+  }
+  .tab_title{
+    position: initial;
+  }
+  .tab_title .t_t_list {
+    width: 100%;
+  }
+  .tab_title .t_t_item.on {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .tab_title .t_t_item {
+    font-size: 14px;
+    font-weight: 300;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: none;
+  }
+  .tab_title .t_t_item::after{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .tab_slide_box{
+    height: 519px;
+  }
+  .cate_box{
+    justify-content: initial;
+    flex-direction: column-reverse;
+  }
+  .cate_box .right_wrap{
+    margin: 0;
+    width: 100%;
+  }
+  .cate_box .right_wrap .img_slide_box {
+    height: 322px;
+  }
+  .cate_box .right_wrap .img_slide_box .img_slide {
+    height: 300px;
+  }
+  .cate_box .right_wrap .swiper-pagination {
+    position: absolute;
+    bottom: 34px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cate_box .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .cate_box .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 0 0 12px;
+  }
+  .cate_box .swiper-pagination-bullet{
+    background: #fff;
+  }
+  .cate_box .swiper-pagination-bullet-active{
+    background: #c6a582;
+  }
+  .cate_box .right_wrap .img_slide_box .slide_btn {
+    left: auto;
+    right: 0;
+  }
+  .cate_box .left_wrap .info_txt{
+    margin-bottom: 13px;
+  }
+  .cate_box .left_wrap .info_txt .title {
+    font-size: 19px;
+    font-weight: 300;
+  }
+  .cate_box .left_wrap .info_txt .txt {
+    display: block;
+    line-height: 1.7;
+    margin-top: 3px;
+    font-size: 14px;
+    width: 320px;
+    letter-spacing: 0rem;
+  }
+  .cate_box .left_wrap .view_btn{
+    padding: 13px 28px;
+    background: #bfb8b1;
+  }
+
+  /* sc_special */
+  .sc_special {
+    padding: 55px 0 65px;
+    background: #fff;
+  }
+  .sc_special .cont_head {
+    margin-bottom: 29px;
+  }
+  .sc_special .tab_title{
+    position: initial;
+  }
+
+  /* sc_room */
+  .sc_room{
+    height: 80vh;
+    background-position: 80% 50%;
+  }
+  .sc_room .cont_head{
+    padding-left: 5%;
+  }
+  .sc_room .cont_head .main_title {
+    margin-bottom: 30px;
+  }
+  .room_tab_slide_box{
+    display: block;
+    flex: none;
+    height: 458px;
+    margin-top: 150px;
+  }
+  .room_tab_title{
+    width: 90%;
+    flex: none;
+    height: auto !important;
+  }
+  .room_tab_title .r_t_item{
+    font-size: 15px;
+  }
+  .room_tab_title .r_t_item::after{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .room_wrap{
+    width: 90%;
+    height: auto;
+  }
+  .room_wrap .slide_btn{
+    bottom: -30px;
+  }
+  .room_cate_box .text_wrap .title {
+    font-size: 19px;
+    font-weight: 300;
+  }
+  .room_cate_box .text_wrap .txt {
+    margin-top: 9px;
+    font-size: 14px;
+  }
+  .room_cate_box .text_wrap {
+    margin-top: 0px;
+    padding: 40px 0 60px;
+    margin-left: 4%;
+  }
+
+  /* sc_contact_us */
+  .sc_contact_us .cont_box .wrap {
+    margin-left: 20px;
+    padding-top: 45px;
+  }
+  .cont_box .cont_head .hotel_address{
+    margin-top: 16px;
+  }
+  .cont_box .cont_head .hotel_address .hotel_address_hidden{
+    font-size: 14px;
+  }
+  .cont_box .cont_head .hotel_address::after{
+    top: 1px;
+    left: 226px;
+  }
+  .cont_box .cont_head .call {
+    font-size: 19px;
+  }
+  .css_box{
+    margin: 30px 0 17px 0;
+  }
+  .css_box .css_item{
+    padding: 10px 0;
+  }
+  .css_box .css_item .ico {
+    width: 31px;
+    height: 31px;
+  }
+  .css_box .css_item .txt{
+    font-size: 12px;
+    letter-spacing: -0.03rem;
+  }
+  .css_box .css_item .title {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .css_box .css_item:nth-child(odd) {
+    width: 45%;
+  }
+  .css_box .css_item .txt_wrap {
+    margin-left: 10px;
+  }
+  .sc_contact_us .map_box{
+    height: 300px;
+  }
+  .map_box .info_list .info_item > a {
+    width: 62px;
+    padding: 16px 0;
+    font-size: 12px;
+  }
+  .map_box .info_wrap{
+    background-position: 50% 64%;
+    background-size: auto;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .tab_slide_box {
+    height: 519px;
+    padding: 0 15px;
+  }
+  .tab_title .t_t_item{
+    text-align: left;
+    flex: none;
+  }
+  .tab_title .t_t_item:last-child{
+    text-align: right;
+  }
+  .tab_title .t_t_item::after{
+    background: transparent;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sc_room{
+    height: 62vh;
+  }
+  .room_tab_slide_box{
+    margin-top: 5px;
+  }
+}
+
+
+@media screen and (max-width: 499px){
+  .main_vis .text_box .main_title{
+    font-size: 30px;
+    line-height: 1;
+    width: 270px;
+  }
+  .main_vis .text_box .main_title::before {
+    left: 17px;
+    top: -3px;
+    width: 23px;
+    height: 17px;
+  }
+  .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all.ui-datepicker-multi.ui-datepicker-multi-2{
+    width: 94% !important;
+    top: 414px !important;
+  }
+  .ui-datepicker-multi .ui-datepicker-group {
+    float: none;
+    width: 100%;
+  }
+  .sc_event_package .swiper .swiper-pagination-progressbar {
+    width: 170px;
+    bottom: 3px;
+  }
+  .tab_title .t_t_list{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .sc_room {
+    height: 95vh;
+  }
+  .sc_room .cont_head{
+    padding-left: 0;
+    text-align: center;
+  }
+  .room_tab_title .r_t_list{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .room_tab_title .r_t_item {
+    font-size: 17px;
+  }
+  .room_tab_slide_box {
+    margin-top: 0;
+  }
+  .room_cate_box{
+    bottom: auto;
+    top: 30px;
+  }
+  .room_cate_box .text_wrap{
+    padding: 30px 0 0;
+  }
+}

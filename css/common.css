@@ -1,0 +1,91 @@
+/* 
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"></div>
+  </div>
+</div>
+*/
+
+
+/*
+font
+
+~ Noto Sans KR 300, 400, 500, 700~
+font-family: 'Noto Sans KR', sans-serif;
+
+~ Lora - 400, 700 ~
+font-family: 'Lora', serif;
+
+~ Playfair Display - 400, 500, 600, 700 ~
+font-family: 'Playfair Display', serif;
+*/
+
+/* blind */
+.blind{
+  width: 1px;height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+}
+
+/* 모든 img들은 100% */
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 공용 cont_head */
+.cont_head{
+  text-align: center;
+}
+.cont_head .main_title{
+  line-height: 1;
+  font-weight: 400;
+  font-size: 52px;
+  color: #111;
+}
+.cont_head .txt{
+  margin-top: 28px;
+  font-weight: 400;
+  color: #444;
+}
+
+/* &부분만 lora폰트 */
+.lora{
+  font-family: 'Lora', serif;
+}
+
+/* 공용 슬라이드 이전,다음 */
+.slide_btn{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 5;
+}
+.slide_btn .s_btn{
+  display: block;
+  width: 60px;
+  height: 12px;
+  background: url(http://interburgo.koweb.co.kr/images/main/arr_basic.svg) no-repeat 50% 50%;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  float: left;
+}
+.slide_btn .s_btn.prev{
+  margin-right: 36px;
+  transform: rotate(180deg);
+}
+.slide_btn .s_btn.next{}
+
+/* 공용 view more 버튼 */
+.view_btn{
+  display: inline-block;
+  padding: 21px 50px;
+  background: #c6a582;
+  font-size: 14px;
+  color: #fff;
+  text-transform: inherit;
+}

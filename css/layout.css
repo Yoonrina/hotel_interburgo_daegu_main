@@ -1,0 +1,1068 @@
+@import 'reset.css';
+@import 'common.css';
+
+/* body */
+body{
+  font-size: 16px;
+  word-break: keep-all;
+  line-height: 1.5;
+  font-family: 'Playfair Display', 'Noto Sans KR', serif;
+  color: #444;
+  position: relative;
+}
+::selection{
+  background: rgb(198 165 130 / 71%);
+  color: #fff;
+}
+body.hidden{
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;
+}
+
+/* 커서포인트 */
+.cursor{
+  position: fixed;
+  opacity: 0.4;
+  top: 10px;
+  left: 10px;
+  z-index: 9999;
+  width: 20px;
+  height: 20px;
+  background-color: #848484;
+  /* transition: width .1s, height .1s, opacity .1s, transform .1s; */
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+/* .cursor.hover{
+  opacity: 0.4;
+  background-color: #c6a582;
+  transform: scale(4) translate(-20%, -20%);
+} */
+
+/* 탑버튼 */
+.top_btn{
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: #1e1e1e url(http://interburgo.koweb.co.kr/images/common/arr_top.svg) no-repeat;
+  background-size: 6px;
+  background-position: 50% 50%;
+  transition: opacity 0.4s ease-out 0s;
+  border-radius: 100px;
+  transform: rotate(270deg);
+  border-radius: 100px;
+  z-index: 999;
+  opacity: 0;
+}
+.top_btn.show{
+  opacity: 1;
+}
+.top_btn.bottom{
+  position: absolute;
+  right: 50px;
+  bottom: 270px;
+  opacity: 1;
+}
+
+/* header */
+header{
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+
+  /* background: #555; */
+}
+.logo_area{
+  border-bottom: 1px solid rgb(255, 255, 255, 0.22);
+  transition: all 0.4s ease 0s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  color: #fff;
+}
+.logo_area .logo{
+  width: 414px;
+  height: 58px;
+  background: url(http://interburgo.koweb.co.kr/images/common/logo.png) no-repeat;
+  background-size: 100%;
+  transition: all 0.4s ease 0s;
+  margin-left: 90px;
+}
+.logo_area .logo > a{
+  display: block;
+  height: 100%;
+}
+
+.logo_area .wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_area .gnb{}
+.logo_area .gnb .gnb_menu{
+  display: flex;
+}
+.logo_area .gnb .gnb_item{
+  padding: 0 32px;
+}
+.logo_area .gnb .gnb_item>a{
+  font-size: 15px;
+  font-weight: 300;
+  display: block;
+  padding: 36px 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.logo_area .gnb .en{
+  /* visibility: hidden;
+  position: absolute; */
+}
+.logo_area .gnb .en.off{
+  visibility: hidden;
+  opacity: 0;
+  /* position: absolute; */
+}
+.logo_area .gnb .ko{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3;
+}
+.logo_area .gnb .ko.on{
+  visibility: visible;
+  opacity: 1;
+  /* position: initial; */
+  width: 100%;
+}
+
+.logo_area .all_menu{
+  width: 26px;
+  height: 13px;
+  transition: .5s ease-in-out;
+  transform: rotate(0deg);
+  cursor: pointer;
+  position: relative;
+  margin: 0 90px 0 41px;
+}
+.logo_area .all_menu span{
+  position: absolute;
+  right: 0;
+  display: block;
+  opacity: 1;
+  width: 100%;
+  height: 1px;
+  background: #FFF;
+  transition: .25s ease-in-out;
+  transform: rotate(0deg);
+  border-radius: 9px;
+}
+.logo_area .all_menu .line01{
+  top: 0;
+}
+.logo_area .all_menu .line02{
+  top: 50%;
+  width: 72%;
+}
+.logo_area .all_menu .line03{
+  top: 100%;
+}
+
+/* 대메뉴에 호버되었을때 .white 추가 */
+.logo_area.white{
+  background: #fff;
+  color: #000;
+  border-bottom: 1px solid #e4e4e4;
+}
+.logo_area.white .logo{
+  background: url(http://interburgo.koweb.co.kr/images/common/logo_color.png) no-repeat;
+  background-size: 100%;
+}
+.logo_area.white .all_menu span{
+  background: #222;
+}
+
+
+.util_area{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+  font-size: 14px;
+  color: #fff;
+
+  position: absolute;
+  right: 0;
+  /* color: #000; */
+}
+.util_area .member{
+  margin-right: 50px;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+.util_area .member.hide{
+  visibility: hidden;
+  position: absolute;
+}
+.util_area .member_list{
+  display: flex;
+}
+.util_area .member_item{
+  /* padding: 0 23px; */
+}
+.util_area .member_item .m_link{
+  font-family: 'Lora', 'Noto Sans KR', serif;
+  display: inline-block;
+}
+.util_area .member_item+.member_item .m_link::before{
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 13px;
+  background: #fff;
+  opacity: 0.24;
+  margin: 0 23px -3px 23px;
+}
+
+.util_area .reservation{}
+.util_area .reservation::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.util_area .reservation .r_t_btn{
+  float: left;
+  display: block;
+  position: relative;
+  padding: 22px 35px;
+}
+.util_area .reservation .rooms{
+  background: #c6a582;
+  display: flex;
+  align-items: center;
+}
+.util_area .reservation .rooms::before{
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  margin-right: 18px;
+  margin-top: -4px;
+  background: url(http://interburgo.koweb.co.kr/images/common/icon_calendar.svg) no-repeat 50% 50%;
+  vertical-align: middle;
+}
+.util_area .reservation .rooms .r_txt{
+  animation: visualSplit 1.3s infinite;
+}
+.util_area .reservation .rooms .r_01{
+  animation-delay: 0ms;
+}
+.util_area .reservation .rooms .r_02{
+  animation-delay: 100ms;
+}
+.util_area .reservation .rooms .r_03{
+  animation-delay: 200ms;
+}
+.util_area .reservation .rooms .r_04{
+  animation-delay: 300ms;
+}
+@keyframes visualSplit{
+	0%{opacity:0; visibility:hidden;}
+	100%{opacity:1; visibility:visible;}
+}
+
+.util_area .reservation .buffet{
+  background: #2a2a2a;
+}
+.util_area .reservation .buffet::before{
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  margin-right: 18px;
+  margin-top: -4px;
+  background: url(http://interburgo.koweb.co.kr/images/common/icon_calendar.svg) no-repeat 50% 50%;
+  vertical-align: middle;
+}
+
+/* 서브메뉴 */
+.sub_menu_bg{
+  box-shadow: 18px 20px 33.48px 2.52px rgb(0 0 0 / 13%);
+  /* transition: height 0.4s ease 0s; */
+  background: #fff;
+  overflow: hidden;
+  
+  /*
+  대메뉴 호버할때 (+white)
+  높이값이 172px로
+  */
+  height: 0px;
+}
+.sub_menu_bg .banner_img{
+  /* 
+  대메뉴가 호버되면 여기 이미지가 움직임
+  (background-position:50% 50%)
+   */
+  overflow: hidden;
+  width: 45%;
+  max-width: 840px;
+  height: 100%;
+  background-position: 50% 0%;
+  transition: all 1s ease 0s;
+  background: url(http://interburgo.koweb.co.kr/images/common/img_header_banner.jpg) no-repeat;
+}
+.sub_menu_bg .banner_img.mov{
+  background-position: 50% 50%
+}
+
+/* 서브박스 */
+.sub_menu_box{
+  /* 히든 */
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  left: 47%;
+  top: 100px;
+  transition: all 0.3s ease;
+  transition-property: opacity, top, visibility;
+  width: 37%;
+}
+.sub_menu_box.show{
+  visibility: visible;
+  opacity: 1;
+}
+.sub_menu_box .sub_list{
+  height: 172px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.sub_menu_box .sub_item{}
+.sub_menu_box .sub_item > a{
+  display: inline-block;
+  margin-right: 37px;
+  padding: 6px 0px;
+  font-family: 'Noto Sans KR';
+  font-weight: 300;
+  font-size: 15px;
+  color: #666;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+
+
+/* 전체메뉴박스, +.all */
+.logo_area.all .gnb{
+  visibility: hidden;
+  position: absolute;
+}
+.logo_area.all .all_menu .line01{
+  top: 10px;
+  transform: rotate(135deg);
+}
+.logo_area.all .all_menu .line02{
+  opacity: 0;
+  right: -20px;
+}
+.logo_area.all .all_menu .line03{
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+.all_menu_box{
+  /* 히든 */
+  visibility: hidden;
+  opacity: 0;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(http://interburgo.koweb.co.kr/images/common/bg_full.jpg) no-repeat;
+  transition: all 0.7s ease 0s;
+  z-index: -2;
+}
+.all_menu_box.open{
+  visibility: visible;
+  opacity: 1;
+}
+.all_menu_box .inner{
+  height: 100vh;
+  margin-top: 101px;
+  display: flex;
+  justify-content: space-between;
+}
+.all_menu_box .all_menu_wrap{
+  margin-left: calc(50% - 740px);
+  display: flex;
+  align-items: center;
+}
+.all_menu_box .all_menu_wrap .all_gnb{}
+.all_menu_box .all_menu_wrap .a_g_list{
+  margin-bottom: 95px;
+}
+.all_menu_box .all_menu_wrap .a_g_item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+  color: #fff;
+}
+.all_menu_box .all_menu_wrap .a_g_item >a{
+  opacity: 0.22;
+  line-height: 1;
+  font-size: 51px;
+  letter-spacing: 1px;
+  transition: all 0.5s ease 0s;
+  display: flex;
+  align-items: center;
+}
+.all_menu_box .all_menu_wrap .a_g_item >a.show{
+  opacity: 1;
+}
+
+.all_menu_box .a_g_item >a::before{
+  content: "01";
+  display: inline-block;
+  margin-right: 17px;
+  font-size: 18px;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+}
+.all_menu_box .a_g_item >a.show::before{
+  opacity: 1;
+}
+.all_menu_box .a_g_item:nth-child(2) >a::before{
+  content: "02";
+}
+.all_menu_box .a_g_item:nth-child(3) >a::before{
+  content: "03";
+}
+.all_menu_box .a_g_item:nth-child(4) >a::before{
+  content: "04";
+}
+.all_menu_box .a_g_item:nth-child(5) >a::before{
+  content: "05";
+}
+.all_menu_box .a_g_item:nth-child(6) >a::before{
+  content: "06";
+}
+.all_menu_box .a_g_item:nth-child(7) >a::before{
+  content: "07";
+}
+.all_menu_box .a_g_item:nth-child(8) >a::before{
+  content: "08";
+}
+
+.a_g_sub_menu_box{
+  /* visibility: hidden;
+  position: absolute; */
+
+  max-width: 66%;
+  transition: all 0.5s ease 0s;
+  transform: translateX(-20px);
+}
+.a_g_sub_menu_box.open{
+  visibility: visible;
+  transform: translateX(0);
+  /* position: initial; */
+}
+.a_g_sub_list{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 34px;
+  /* position: relative;
+  top: 2px; */
+}
+.a_g_sub_item{
+  margin-right: 28px;
+  padding: 2px 0;
+  opacity: 0;
+}
+.a_g_sub_menu_box.open .a_g_sub_item{
+  opacity: 1;
+  transition: none;
+}
+.a_g_sub_item > a{
+  font-family: 'Noto Sans KR';
+  font-weight: 200;
+  font-size: 15px;
+}
+
+
+.all_menu_box .event_bnr_box{
+  border-left: 1px solid rgba(255,255,255,0.09);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 3%;
+}
+.all_menu_box .event_bnr_box .event_bnr_list{
+  width: 554px;
+  margin: 0 85px;
+  position: relative;
+  overflow: visible;
+}
+
+.all_menu_box .event_bnr_box .event_bnr_item .text_wrap{
+  color: #fff;
+  /* background: #222; */
+  opacity: 0;
+}
+.all_menu_box .event_bnr_box .event_bnr_item.swiper-slide-active .text_wrap{
+  opacity: 1;
+}
+
+.all_menu_box .event_bnr_box .event_bnr_item .text_wrap .date{
+  opacity: 0.5;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: 'Lora', 'Noto Sans KR', serif;
+}
+.all_menu_box .event_bnr_box .event_bnr_item .text_wrap .title{
+  margin-top: 9px;
+  font-weight: 300;
+  font-size: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.all_menu_box .event_bnr_box .event_bnr_item .img_wrap{
+  height: 324px;
+  margin-top: 34px;
+}
+
+.event_bnr_box .swiper-horizontal>.swiper-pagination-bullets,
+.event_bnr_box .swiper-pagination-bullets.swiper-pagination-horizontal,
+.event_bnr_box .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom: -60px;
+}
+.event_bnr_box .swiper-pagination-bullet{
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  transition: all 0.4s ease 0s;
+  opacity: 1;
+}
+.event_bnr_box .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.event_bnr_box .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin: 0 30px 0 0;
+}
+.event_bnr_box .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child,
+.event_bnr_box .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child{
+  margin-right: 0;;
+}
+.event_bnr_box .swiper-pagination-bullet-active{
+  position: relative;
+}
+.event_bnr_box .swiper-pagination-bullet-active::after{
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 23px;
+  height: 23px;
+  margin: -12px -12px;
+  border: 1px solid #fff;
+  transition: all 0.4s ease 0s;
+  border-radius: 30px;
+}
+
+/* footer */
+footer{
+  padding-bottom: 70px;
+  background: #333;
+  color: #ccc;
+}
+footer .inner{
+  width: 1402px;
+  margin: 0 auto;
+}
+footer .corp_area{
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+footer .corp_list{}
+footer .corp_list::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+footer .corp_item{
+  float: left;
+}
+footer .corp_item > a{
+  display: block;
+  position: relative;
+  margin: 25px 0;
+  padding: 0 17px;
+  font-weight: 400;
+  font-size: 13px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+footer .corp_item:first-child > a{
+  padding-left: 0;
+}
+footer .corp_item+.corp_item > a::before{
+  content: "";
+  position: absolute;
+  opacity: 0.2;
+  top: 3px;
+  left: 0;
+  width: 1px;
+  height: 14px;
+  background: #fff;
+}
+
+footer .add_area{
+  margin-top: 46px;
+}
+footer .add_area::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+footer address{
+  float: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: #aaa;
+  line-height: 25px;
+}
+footer address span{
+  display: inline-block;
+}
+footer address .mr{
+  margin-right: 15px;
+}
+footer address .b{
+  margin-right: 4px;
+  font-weight: 500;
+}
+footer address .c{
+  color: #c6a582;
+}
+footer address .copy{
+  display: block;
+  margin-top: 40px;
+  opacity: 0.4;
+  font-size: 13px;
+  color: #fff;
+}
+footer .family_site{
+  float: right;
+  box-shadow: 7px 12px 28px 0px rgb(0 0 0 / 22%);
+  position: relative;
+}
+.family_site .select{
+  position: relative;
+  height: 62px;
+  line-height: 1.25rem;
+  box-sizing: border-box;
+  padding: 21px 30px;
+  background: rgb(63 63 63);
+  text-align: left;
+  transition: 0.3s ease;
+  width: 203px;
+  border: none;
+  cursor: pointer;
+}
+.family_site .select::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  margin-top: -3px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+.family_site .select.up::after{
+  transform: rotate(180deg);
+}
+
+.family_site .select .select_name{
+  font-family: 'Playfair Display', serif;
+  display: block;
+  opacity: 0.7;
+  font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.family_site .option{
+  position: absolute;
+  bottom: 62px;
+  left: 0px;
+  width: 100%;
+
+  /* 히든 */
+  height: 0px;
+  overflow: hidden;
+}
+.family_site .o_list{
+  padding: 0.8rem 26px;
+  background: #3f3f3f;
+}
+.family_site .o_list .o_item > a{
+  display: block;
+  opacity: 0.4;
+  padding: 3px 0px;
+  font-weight: 200;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: left;
+  transition: 0.3s ease;
+}
+.family_site .o_list .o_item:hover > a{
+  opacity: 1;
+}
+
+.app_area{
+  display: none;
+}
+
+
+@media screen and (max-width: 1820px) {
+  /* header */
+  .logo_area .gnb .gnb_item{
+    padding: 0 20px;
+  }
+  .logo_area .logo{
+    width: 350px;
+    margin-left: 35px;
+  }
+}
+
+
+@media screen and (max-width: 1520px) {
+  /* header */
+  .logo_area .gnb .gnb_item{
+    padding: 0 17px;
+  }
+  .logo_area .all_menu{
+    margin: 0 35px 0 15px;
+  }
+  .logo_area .logo{
+    width: 323px;
+    margin-left: 35px;
+  }
+  .logo_area .gnb .gnb_item>a{
+    font-size: 14px;
+  }
+  .util_area .member{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  .util_area .reservation .r_t_btn{
+    padding: 19px 21px;
+  }
+
+  /* all_menu_box */
+  .all_menu_box .all_menu_wrap .a_g_item >a{
+    font-size: 43px;
+  }
+  .all_menu_box .all_menu_wrap{
+    margin-left: 40px;
+  }
+  .all_menu_box .event_bnr_box .event_bnr_list{
+    width: 425px;
+    margin: 0 55px;
+  }
+}
+
+
+@media screen and (max-width: 1280px){
+  /* header */
+  .logo_area .logo{
+    width: 300px;
+  }
+  .logo_area .gnb .gnb_item {
+    padding: 0 13px;
+  }
+
+  /* all_menu_box */
+  .all_menu_box .all_menu_wrap {
+    margin-left: 30px;
+  }
+  .all_menu_box .all_menu_wrap .a_g_item{
+    margin-bottom: 23px;
+  }
+
+  /* footer */
+  footer .inner{
+    width: auto;
+    margin: 0 50px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  /* 커서포인트 */
+  .cursor{
+    display: none;
+  }
+
+  /* header */
+  .logo_area{
+    height: 74px;
+  }
+  .logo_area.all{
+    border-bottom: none;
+  }
+  .logo_area .logo {
+    width: 323px;
+    margin-left: 20px;
+  }
+  .logo_area .gnb{
+    display: none;
+  }
+  .logo_area .all_menu {
+    margin: 0 20px 0 15px;
+  }
+  .util_area .reservation .r_t_btn {
+    padding: 15px 18px;
+  }
+  .util_area .reservation{
+    z-index: -2;
+  }
+
+  /* all_menu_box */
+  .all_menu_box .event_bnr_box .event_bnr_list{
+    display: none;
+  }
+  .all_menu_wrap{
+    margin-left: 0;
+  }
+  .all_menu_box .all_menu_wrap .all_gnb{
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    top: 130px;
+    right: 0px;
+    width: 100%;
+    height: 83vh;
+    padding-top: 3vh;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  .all_menu_box .all_menu_wrap .all_gnb::after{
+    content: "";
+    position: absolute;
+    opacity: 0.1;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: #fff;
+  }
+  .all_menu_box .all_menu_wrap .a_g_item{
+    /* position: relative; */
+    margin-bottom: 0px;
+  }
+  .all_menu_box .all_menu_wrap .a_g_item >a {
+    display: block;
+    padding: 10px 4%;
+    font-size: 18px;
+    color: #fff;
+    opacity: 1;
+  }
+  .all_menu_box .a_g_item >a::before{
+    display: none;
+  }
+  .all_menu_box .all_menu_wrap .a_g_list{
+    margin-bottom: 0;
+  }
+
+/* 서브메뉴변경 */
+  .a_g_list{
+    position: relative;
+  }
+  .a_g_sub_menu_box{
+    position: absolute;
+    left: 54%;
+    top: 2%;
+  }
+  .a_g_sub_menu_box.click .a_g_sub_item{
+    opacity: 1;
+    transition: none;
+  }
+  .a_g_sub_list{
+    display: block;
+    margin-left: 0;
+  }
+  .a_g_sub_item{
+    margin-right: 28px;
+    padding: 2px 0;
+    opacity: 0;
+  }
+
+  /* footer */
+  footer .family_site {
+    float: none;
+    display: inline-block;
+    margin-top: 43px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* header */
+  .logo_area {
+    height: 60px;
+  }
+  .logo_area .logo{
+    width: 244px;
+    margin: 25px 0 0 20px;
+  }
+  .logo_area .all_menu{
+    width: 20px;
+  }
+  .util_area{
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    /* 히든 */
+    opacity: 0;
+    visibility: hidden;
+  }
+  .util_area.on{
+    opacity: 1;
+    visibility: visible;
+  }
+  .util_area .reservation .r_t_btn{
+    width: 50%;
+    text-align: center;
+  }
+  .util_area .reservation .rooms{
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* footer */
+  footer{
+    padding-bottom: 100px;
+  }
+  footer .inner{
+    margin: 0 20px;
+  }
+  footer .corp_list {
+    overflow-x: scroll;
+    display: flex;
+  }
+  footer .corp_item {
+    float: none;
+  }
+  footer .corp_item > a{
+    margin: 11px 0;
+    padding: 0 10px;
+    color: #ccc;
+    font-weight: 300;
+  }
+  footer .add_area {
+    margin-top: 30px;
+  }
+  footer address{
+    font-family: 'lora', Sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  footer address .b{
+    color: #d8d8d8;
+  }
+  footer address .copy{
+    margin-top: 12px;
+    font-size: 13px;
+    font-family: Sans-serif;
+    line-height: 1.3;
+    text-transform: lowercase;
+  }
+  .family_site .select{
+    width: 153px;
+    height: 52px;
+    padding: 16px 20px;
+  }
+  footer .family_site{
+    margin-top: 30px;
+    box-shadow: none;
+  }
+
+  .app_area{
+    display: block;
+    margin-top: 44px;
+    overflow: hidden;
+  }
+  .app_area .app_btn{
+    float: left;
+    display: block;
+    padding: 12px 17px;
+    background: #1c1c1c;
+    border-radius: 5px;
+    margin-right: 4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .app_area .google::before{
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 21px;
+    background: url(http://interburgo.koweb.co.kr/images/common/icon_app01.svg) no-repeat;
+    background-size: 100%;
+    margin-bottom: -5px;
+  }
+  .app_area .appstore::before{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 21px;
+    background: url(http://interburgo.koweb.co.kr/images/common/icon_app02.svg) no-repeat;
+    background-size: 100%;
+    margin-bottom: -5px;
+  }
+  .family_site .option{
+    bottom: 52px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .a_g_sub_menu_box {
+    position: absolute;
+    left: 60%;
+    top: 2%;
+  }
+}
+
+@media screen and (max-width: 499px){
+  .logo_area .logo{
+    margin: 23px 0 0 10px;
+  }
+  .logo_area .all_menu {
+    margin: 0 10px 0 10px;
+  }
+}
