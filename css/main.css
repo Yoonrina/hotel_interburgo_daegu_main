@@ -596,7 +596,7 @@
 /* //sc_special */
 
 .sc_room{
-  background-image: url(http://interburgo.koweb.co.kr/images/main/bg_room.jpg);
+  background-image: url(../img/main/sc05room/bg_room.jpg);
   display: flex;
   position: relative;
   overflow: hidden;
