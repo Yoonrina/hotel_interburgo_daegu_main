@@ -163,6 +163,7 @@
   width: 100%;
   border: none;
   border-right: 1px solid #ddd;
+  background: #fff;
   line-height: 65px;
   color: #333;
   font-size: 14px;
@@ -191,6 +192,7 @@
 .reservation_calendar .cal_item select{
   border: none;
   border-right: 1px solid #ddd;
+  background: #fff;
   width: 100%;
   line-height: 65px;
   color: #333;
