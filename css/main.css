@@ -1457,16 +1457,29 @@
   .reservation_calendar .cal_item select{
     line-height: 40px;
     height: 40px;
-    border-right: none;
   }
-  .reservation_calendar .cal_list .cal_item {
+  .reservation_calendar .cal_list .cal_item{
     margin-bottom: 0;
     border-bottom: 1px solid #ddd;
+  }
+  .reservation_calendar .cal_list .ci_date,
+  .reservation_calendar .cal_list .child{
+    border-right: none;
+  }
+  .reservation_calendar .cal_list .company,
+  .reservation_calendar .cal_list .search {
+    border-bottom: none;
+  }
+  .reservation_calendar .search > a{
+    margin-left: 0;
   }
   .date_box{
     line-height: 40px;
     height: 40px;
     border: none;
+  }
+  .date_box.from{
+    border-right: 1px solid #ddd;
   }
   .reservation_calendar .company > input{
     height: 40px;
