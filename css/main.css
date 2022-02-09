@@ -142,7 +142,12 @@
   display: flex;
   /* width: 1200px; */
 }
-.reservation_calendar .cal_item{}
+.reservation_calendar .cal_item{
+  border-right: 1px solid #ddd;
+}
+.reservation_calendar .cal_item:last-child{
+  border-right: none;
+}
 .reservation_calendar .ci_date{
   width: 30.5%;
   display: flex;
@@ -191,7 +196,6 @@
 }
 .reservation_calendar .cal_item select{
   border: none;
-  border-right: 1px solid #ddd;
   background: #fff;
   width: 100%;
   line-height: 65px;
@@ -224,9 +228,7 @@
 .from{
   border-right: 1px solid #ddd;
 }
-.to{
-  border-right: 1px solid #ddd;
-}
+.to{}
 
 /* 달력커스텀 */
 .ui-widget.ui-widget-content{
