@@ -25,7 +25,7 @@
   content: "";
   width: 57px;
   height: 37px;
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_text.svg) no-repeat;
+  background: url(../img/main/sc01vis/icon_text.svg) no-repeat;
   background-size: 100%;
   position: absolute;
   left: 450px;
@@ -73,27 +73,27 @@
   background: #000;
 }
 .main_vis .bg01{
-  background: url(http://interburgo.koweb.co.kr/images/main/img_visual01.jpg) no-repeat;
+  background: url(../img/main/sc01vis/img_visual01.jpg) no-repeat;
   background-size: cover;
 }
 .main_vis .bg02{
-  background: url(http://interburgo.koweb.co.kr/images/main/img_visual02.jpg) no-repeat;
+  background: url(../img/main/sc01vis/img_visual02.jpg) no-repeat;
   background-size: cover;
 }
 .main_vis .bg03{
-  background: url(http://interburgo.koweb.co.kr/images/main/img_visual03.jpg) no-repeat;
+  background: url(../img/main/sc01vis/img_visual03.jpg) no-repeat;
   background-size: cover;
 }
 .main_vis .bg04{
-  background: url(http://interburgo.koweb.co.kr/images/main/img_visual04.jpg) no-repeat;
+  background: url(../img/main/sc01vis/img_visual04.jpg) no-repeat;
   background-size: cover;
 }
 .main_vis .bg05{
-  background: url(http://interburgo.koweb.co.kr/images/main/img_visual05.jpg) no-repeat;
+  background: url(../img/main/sc01vis/img_visual05.jpg) no-repeat;
   background-size: cover;
 }
 .main_vis .bg06{
-  background: url(http://interburgo.koweb.co.kr/images/main/img_visual06.jpg) no-repeat;
+  background: url(../img/main/sc01vis/img_visual06.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -262,7 +262,7 @@
   appearance: none;
   -moz-appearance: none; /* Firefox */ 
   -webkit-appearance: none; /* Safari and Chrome */
-  background: url(../img/date_arrow.jpg)no-repeat;
+  background: url(../img/header/datepicker_arrow/date_arrow.jpg)no-repeat;
 }
 .ui-datepicker-title .ui-datepicker-month{
   background-position: 55px 14px;
@@ -760,7 +760,7 @@
   width: 18px;
   height: 21px;
   margin-left: 8px;
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_contact.svg) no-repeat 50% 50%;
+  background: url(../img/main/sc06contact/icon_contact.svg) no-repeat 50% 50%;
 }
 .cont_box .cont_head .hotel_address .hotel_address_hidden{
   border: none;
@@ -830,27 +830,27 @@
   margin-top: 5px;
 }
 .css_box .css_item .i1{
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_location01.svg) no-repeat;
+  background: url(../img/main/sc06contact/icon_location01.svg) no-repeat;
   background-size: 100%;
 }
 .css_box .css_item .i2{
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_location02.svg) no-repeat;
+  background: url(../img/main/sc06contact/icon_location02.svg) no-repeat;
   background-size: 100%;
 }
 .css_box .css_item .i3{
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_location03.svg) no-repeat;
+  background: url(../img/main/sc06contact/icon_location03.svg) no-repeat;
   background-size: 100%;
 }
 .css_box .css_item .i4{
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_location04.svg) no-repeat;
+  background: url(../img/main/sc06contact/icon_location04.svg) no-repeat;
   background-size: 100%;
 }
 .css_box .css_item .i5{
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_location06.svg) no-repeat;
+  background: url(../img/main/sc06contact/icon_location06.svg) no-repeat;
   background-size: 100%;
 }
 .css_box .css_item .i6{
-  background: url(http://interburgo.koweb.co.kr/images/main/icon_location05.svg) no-repeat;
+  background: url(../img/main/sc06contact/icon_location05.svg) no-repeat;
   background-size: 100%;
 }
 
@@ -879,7 +879,7 @@
   height: 839px;
 }
 .map_box .info_wrap{
-  background: url(http://interburgo.koweb.co.kr/images/main/img_map.jpg) no-repeat;
+  background: url(../img/main/sc06contact/img_map.jpg) no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100%;

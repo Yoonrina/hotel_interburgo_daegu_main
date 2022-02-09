@@ -50,7 +50,7 @@ body.hidden{
   display: block;
   width: 60px;
   height: 60px;
-  background: #1e1e1e url(http://interburgo.koweb.co.kr/images/common/arr_top.svg) no-repeat;
+  background: #1e1e1e url(../img/common/arr_top.svg) no-repeat;
   background-size: 6px;
   background-position: 50% 50%;
   transition: opacity 0.4s ease-out 0s;
@@ -93,7 +93,7 @@ header{
 .logo_area .logo{
   width: 414px;
   height: 58px;
-  background: url(http://interburgo.koweb.co.kr/images/common/logo.png) no-repeat;
+  background: url(../img/header/logo/logo.png) no-repeat;
   background-size: 100%;
   transition: all 0.4s ease 0s;
   margin-left: 90px;
@@ -190,7 +190,7 @@ header{
   border-bottom: 1px solid #e4e4e4;
 }
 .logo_area.white .logo{
-  background: url(http://interburgo.koweb.co.kr/images/common/logo_color.png) no-repeat;
+  background: url(../img/header/logo/logo_color.png) no-repeat;
   background-size: 100%;
 }
 .logo_area.white .all_menu span{
@@ -263,7 +263,7 @@ header{
   height: 16px;
   margin-right: 18px;
   margin-top: -4px;
-  background: url(http://interburgo.koweb.co.kr/images/common/icon_calendar.svg) no-repeat 50% 50%;
+  background: url(../img/header/util/calindar.svg) no-repeat 50% 50%;
   vertical-align: middle;
 }
 .util_area .reservation .rooms .r_txt{
@@ -296,35 +296,25 @@ header{
   height: 16px;
   margin-right: 18px;
   margin-top: -4px;
-  background: url(http://interburgo.koweb.co.kr/images/common/icon_calendar.svg) no-repeat 50% 50%;
+  background: url(../img/header/util/calindar.svg) no-repeat 50% 50%;
   vertical-align: middle;
 }
 
 /* 서브메뉴 */
 .sub_menu_bg{
   box-shadow: 18px 20px 33.48px 2.52px rgb(0 0 0 / 13%);
-  /* transition: height 0.4s ease 0s; */
   background: #fff;
   overflow: hidden;
-  
-  /*
-  대메뉴 호버할때 (+white)
-  높이값이 172px로
-  */
   height: 0px;
 }
 .sub_menu_bg .banner_img{
-  /* 
-  대메뉴가 호버되면 여기 이미지가 움직임
-  (background-position:50% 50%)
-   */
   overflow: hidden;
   width: 45%;
   max-width: 840px;
   height: 100%;
   background-position: 50% 0%;
   transition: all 1s ease 0s;
-  background: url(http://interburgo.koweb.co.kr/images/common/img_header_banner.jpg) no-repeat;
+  background: url(../img/header/catehv/img_header_banner.jpg) no-repeat;
 }
 .sub_menu_bg .banner_img.mov{
   background-position: 50% 50%
@@ -397,7 +387,7 @@ header{
   top: 0;
   width: 100%;
   height: 100vh;
-  background: url(http://interburgo.koweb.co.kr/images/common/bg_full.jpg) no-repeat;
+  background: url(../img/header/allmenu/bg_full.jpg) no-repeat;
   transition: all 0.7s ease 0s;
   z-index: -2;
 }

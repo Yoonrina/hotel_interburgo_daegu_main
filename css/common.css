@@ -69,7 +69,7 @@ img{
   display: block;
   width: 60px;
   height: 12px;
-  background: url(http://interburgo.koweb.co.kr/images/main/arr_basic.svg) no-repeat 50% 50%;
+  background: url(../img/common/arr_basic.svg) no-repeat 50% 50%;
   transition: all 0.4s ease 0s;
   cursor: pointer;
   float: left;
