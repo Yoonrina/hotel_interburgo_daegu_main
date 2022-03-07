@@ -584,7 +584,8 @@ footer{
   color: #ccc;
 }
 footer .inner{
-  width: 1402px;
+  max-width: 1402px;
+  width:100%;
   margin: 0 auto;
 }
 footer .corp_area{
