@@ -584,8 +584,8 @@ footer{
   color: #ccc;
 }
 footer .inner{
+  width: 100%;
   max-width: 1402px;
-  width:100%;
   margin: 0 auto;
 }
 footer .corp_area{
@@ -806,8 +806,7 @@ footer .family_site{
 
   /* footer */
   footer .inner{
-    width: auto;
-    margin: 0 50px;
+    max-width: 90%;
   }
 }
 
@@ -958,9 +957,6 @@ footer .family_site{
   footer{
     padding-bottom: 100px;
   }
-  footer .inner{
-    margin: 0 20px;
-  }
   footer .corp_list {
     overflow-x: scroll;
     display: flex;
@@ -1023,7 +1019,7 @@ footer .family_site{
     display: inline-block;
     width: 18px;
     height: 21px;
-    background: url(http://interburgo.koweb.co.kr/images/common/icon_app01.svg) no-repeat;
+    background: url(../img/footer/icon_app01.svg) no-repeat;
     background-size: 100%;
     margin-bottom: -5px;
   }
@@ -1032,7 +1028,7 @@ footer .family_site{
     display: inline-block;
     width: 16px;
     height: 21px;
-    background: url(http://interburgo.koweb.co.kr/images/common/icon_app02.svg) no-repeat;
+    background: url(../img/footer/icon_app02.svg) no-repeat;
     background-size: 100%;
     margin-bottom: -5px;
   }
