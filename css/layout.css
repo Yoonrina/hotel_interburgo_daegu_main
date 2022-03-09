@@ -124,6 +124,7 @@ header{
   width: 100%;
   text-align: center;
   position: relative;
+  color: #fff;
 }
 .logo_area .gnb .en{
   /* visibility: hidden;
@@ -195,6 +196,9 @@ header{
 }
 .logo_area.white .all_menu span{
   background: #222;
+}
+.logo_area.white .gnb .gnb_item>a{
+  color: #000;
 }
 
 
