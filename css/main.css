@@ -1667,6 +1667,9 @@
   .sc_special .tab_title{
     position: initial;
   }
+  .sc_special .cate_box .left_wrap .info_txt .title {
+    text-align: left;
+  }
 
   /* sc_room */
   .sc_room{
@@ -1798,6 +1801,12 @@
   .room_tab_slide_box{
     margin-top: 5px;
   }
+  .sc_dining .tab_cate_all .cate_box {
+    width: 100%;
+  }
+  .sc_special .tab_cate_all .cate_box {
+    width: 100%;
+  }
 }
 
 
@@ -1852,5 +1861,15 @@
   }
   .room_cate_box .text_wrap{
     padding: 30px 0 0;
+  }
+}
+
+@media screen and (max-width: 412px){
+  .css_box .css_item .ico{
+    float: none;
+  }
+  .css_box .css_item .txt_wrap {
+    float: none;
+    margin-left: 0;
   }
 }
